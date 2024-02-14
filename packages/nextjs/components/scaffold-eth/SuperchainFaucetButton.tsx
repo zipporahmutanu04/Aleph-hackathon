@@ -2,27 +2,13 @@
 
 import Image from "next/image";
 import opLogo from "../assets/optimism_logo.png";
-import { optimismSepolia } from "@wagmi/core/chains";
-import { hardhat } from "viem/chains";
-import { useNetwork, useSwitchNetwork } from "wagmi";
 
 /**
  * FaucetButton button which lets you grab eth.
  */
 export const SuperchainFaucetButton = () => {
-  const { chain } = useNetwork();
-  const { switchNetwork } = useSwitchNetwork({
-    onSuccess() {
-      window.open("https://app.optimism.io/faucet", "_blank");
-    },
-  });
-
   const openSuperchainFaucet = () => {
-    if (chain && chain.id !== hardhat.id) {
-      window.open("https://app.optimism.io/faucet", "_blank");
-    } else {
-      switchNetwork?.(optimismSepolia.id);
-    }
+    window.open("https://app.optimism.io/faucet", "_blank");
   };
 
   return (
