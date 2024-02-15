@@ -1,9 +1,16 @@
-# 🏗 Scaffold-ETH 2
+<div align="center">
+  <a href="https://optimism.io"><img alt="Optimism" src="https://raw.githubusercontent.com/ethereum-optimism/brand-kit/main/assets/svg/OPTIMISM-R.svg" width=320></a>
+  <br />
+  <br />
+</div>
+
+# 🏗 Scaffold-OP
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
+Scaffold-OP is a fork of [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) with minimal diffs, providing additional examples and link to Superchain Faucet.
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
@@ -27,7 +34,7 @@ Before you begin, you need to install the following tools:
 
 ## Quickstart
 
-To get started with Scaffold-ETH 2, follow the steps below:
+To get started with Scaffold-OP, follow the steps below:
 
 1. Clone this repo & install dependencies
 
@@ -66,6 +73,28 @@ Run smart contract test with `yarn hardhat:test`
 - Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
 - Edit your frontend in `packages/nextjs/pages`
 - Edit your deployment scripts in `packages/hardhat/deploy`
+
+## Deploying to remote testnet
+
+To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the steps below:
+
+1. Get Optimism Sepolia ETH from the [Superchain Faucet](https://app.optimism.io/faucet)
+
+2. Inside the `packages/hardhat` directory, create a `.env` file and add `DEPLOYER_PRIVATE_KEY` variable with your private key:
+
+   ```bash
+   DEPLOYER_PRIVATE_KEY="fill_in_your_private_key_here"
+   ```
+
+3. Inside `scaffold-op`, run 
+
+   ```bash
+   yarn deploy --network optimismSepolia
+   ```
+
+   This command deploys the smart contracts in `packages/hardhat/contracts` to Optimism Sepolia. The contract is deployed using the Sepolia ETH from the account corresponding to the private key you provided in step 2. 
+
+4. In `nextjs/scaffold.config.ts`, change the `targetNetworks` to
 
 ## Documentation
 

@@ -126,6 +126,14 @@ const config: HardhatUserConfig = {
       url: "https://sepolia.publicgoods.network",
       accounts: [deployerPrivateKey],
     },
+    zora: {
+      url: "https://rpc.zora.energy",
+      accounts: [deployerPrivateKey],
+    },
+    zoraSepolia: {
+      url: "https://sepolia.rpc.zora.energy",
+      accounts: [deployerPrivateKey],
+    },
   },
   // configuration for harhdat-verify plugin
   etherscan: {
