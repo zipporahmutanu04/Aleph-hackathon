@@ -59,6 +59,9 @@ import inquirer from "inquirer";
     }
   } else {
     // If "--network-options" was not provided, directly call "hardhat deploy" without network options
-    await execa("hardhat", ["deploy"], { stdio: "inherit" });
+    const args = process.argv.slice(2).filter(arg => arg !== "--network-options");
+
+    console.log(`Deploying with provided CLI arguments to`, args[1]);
+    await execa("hardhat", ["deploy", ...args], { stdio: "inherit" });
   }
 })();

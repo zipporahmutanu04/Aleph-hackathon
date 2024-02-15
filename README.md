@@ -10,7 +10,7 @@
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
-Scaffold-OP is a fork of [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) with minimal diffs, providing additional examples and link to Superchain Faucet.
+Scaffold-OP is a fork of [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) with minimal diffs, providing additional examples and native support for Superchain testnets.
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
@@ -32,6 +32,8 @@ Before you begin, you need to install the following tools:
 - Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
 - [Git](https://git-scm.com/downloads)
 
+
+
 ## Quickstart
 
 To get started with Scaffold-OP, follow the steps below:
@@ -39,8 +41,8 @@ To get started with Scaffold-OP, follow the steps below:
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/scaffold-eth/scaffold-eth-2.git
-cd scaffold-eth-2
+git clone https://github.com/ethereum-optimism/scaffold-op.git
+cd scaffold-op
 yarn install
 ```
 
@@ -74,7 +76,9 @@ Run smart contract test with `yarn hardhat:test`
 - Edit your frontend in `packages/nextjs/pages`
 - Edit your deployment scripts in `packages/hardhat/deploy`
 
-## Deploying to remote testnet
+
+
+## Deploy Contracts to Superchain Testnet(s)
 
 To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the steps below:
 
@@ -86,24 +90,18 @@ To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the step
    DEPLOYER_PRIVATE_KEY="fill_in_your_private_key_here"
    ```
 
-3. Inside `scaffold-op`, run 
+3. Inside `scaffold-op`, run
 
    ```bash
-   yarn deploy --network optimismSepolia
+   yarn deploy --network-options
    ```
 
-   This command deploys the smart contracts in `packages/hardhat/contracts` to Optimism Sepolia. The contract is deployed using the Sepolia ETH from the account corresponding to the private key you provided in step 2. 
+   Use spacebar to make a selection on the prompt (you can select multiple). This command deploys the smart contracts in `packages/hardhat/contracts` to the selected network(s). Please ensure you have enough Sepolia ETH on all these Superchains. The contract is deployed using the Sepolia ETH from the account corresponding to the private key you provided in step 2. 
 
-4. In `nextjs/scaffold.config.ts`, change the `targetNetworks` to
+
 
 ## Documentation
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
+We highly recommend visiting the original [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
-
-## Contributing to Scaffold-ETH 2
-
-We welcome contributions to Scaffold-ETH 2!
-
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+To know more about its features, check out their [website](https://scaffoldeth.io).
