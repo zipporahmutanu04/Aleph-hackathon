@@ -10,7 +10,7 @@
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
-Scaffold-OP is a fork of [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) with minimal diffs, providing additional examples and native support for Superchain testnets.
+Scaffold-OP is a fork of Scaffold-ETH2 with minimal differences, providing an additional instructions, dApp example, native support for Superchain testnets.
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
@@ -84,19 +84,31 @@ To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the step
 
 1. Get Optimism Sepolia ETH from the [Superchain Faucet](https://app.optimism.io/faucet)
 
-2. Inside the `packages/hardhat` directory, create a `.env` file and add `DEPLOYER_PRIVATE_KEY` variable with your private key:
+2. Inside the `packages/hardhat` directory, copy `.env.example` to `.env`.
 
    ```bash
-   DEPLOYER_PRIVATE_KEY="fill_in_your_private_key_here"
+   cp .env.example .env
    ```
 
-3. Inside `scaffold-op`, run
+3. Edit your `.env` to specify the environment variables. Only `DEPLOYER_PRIVATE_KEY` is necessary here. 
+
+   ```js
+   DEPLOYER_PRIVATE_KEY="your_private_key_with_sepoliaETH"
+   ```
+
+4. Inside `scaffold-op`, run
 
    ```bash
    yarn deploy --network-options
    ```
 
-   Use spacebar to make a selection on the prompt (you can select multiple). This command deploys the smart contracts in `packages/hardhat/contracts` to the selected network(s). Please ensure you have enough Sepolia ETH on all these Superchains. The contract is deployed using the Sepolia ETH from the account corresponding to the private key you provided in step 2. 
+   Use spacebar to make a selection on the prompt (you can select multiple). This command deploys the smart contracts in `packages/hardhat/contracts` to the selected network(s). Alternatively, you can do
+
+   ```bash
+   yarn deploy --network networkName
+   ```
+
+   Network names can be found in `hardhat.config.js`. Please ensure you have enough Sepolia ETH on all these Superchains. The contract is deployed using the Sepolia ETH from the account corresponding to the private key you provided in step 2. 
 
 
 
