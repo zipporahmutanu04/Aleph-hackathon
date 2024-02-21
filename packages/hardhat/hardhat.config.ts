@@ -134,6 +134,18 @@ const config: HardhatUserConfig = {
       url: "https://sepolia.rpc.zora.energy",
       accounts: [deployerPrivateKey],
     },
+    liskSepolia: {
+      url: "https://rpc.sepolia-api.lisk.com",
+      accounts: [deployerPrivateKey],
+    },
+    mode: {
+      url: "https://mainnet.mode.network",
+      accounts: [deployerPrivateKey],
+    },
+    modeSepolia: {
+      url: "https://sepolia.mode.network",
+      accounts: [deployerPrivateKey],
+    },
   },
   // configuration for harhdat-verify plugin
   etherscan: {

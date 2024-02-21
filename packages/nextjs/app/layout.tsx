@@ -12,16 +12,16 @@ const imageUrl = `${baseUrl}/thumbnail.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Scaffold-ETH 2 App",
-    template: "%s | Scaffold-ETH 2",
+    default: "Scaffold-OP App",
+    template: "%s | Scaffold-OP",
   },
-  description: "Built with 🏗 Scaffold-ETH 2",
+  description: "Built with 🏗 Scaffold-OP",
   openGraph: {
     title: {
-      default: "Scaffold-ETH 2 App",
-      template: "%s | Scaffold-ETH 2",
+      default: "Scaffold-OP App",
+      template: "%s | Scaffold-OP",
     },
-    description: "Built with 🏗 Scaffold-ETH 2",
+    description: "Built with 🏗 Scaffold-OP",
     images: [
       {
         url: imageUrl,
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [imageUrl],
     title: {
-      default: "Scaffold-ETH 2",
-      template: "%s | Scaffold-ETH 2",
+      default: "Scaffold-OP",
+      template: "%s | Scaffold-OP",
     },
-    description: "Built with 🏗 Scaffold-ETH 2",
+    description: "Built with 🏗 Scaffold-OP",
   },
   icons: {
     icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],

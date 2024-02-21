@@ -8,14 +8,17 @@ import inquirer from "inquirer";
     const answers = await inquirer.prompt([
       {
         type: "checkbox",
-        message: "Select networks to deploy:",
+        message: "Select network(s) to deploy:",
         name: "networks",
+        loop: false,
         choices: [
           { name: "Hardhat (local testnet)", value: "hardhat" },
-          { name: "Optimism Sepolia", value: "optimismSepolia" },
+          { name: "OP Sepolia", value: "optimismSepolia" },
           { name: "Base Sepolia", value: "baseSepolia" },
           { name: "Zora Sepolia", value: "zoraSepolia" },
-          { name: "All Superchain Sepolias (currently only Optimism, Base & Zora supported)", value: "all" },
+          { name: "Lisk Sepolia", value: "liskSepolia" },
+          { name: "Mode Sepolia", value: "modeSepolia" },
+          { name: "All the above", value: "all" },
           { name: "Others (specify)", value: "others" }, // Add this line
         ],
         validate(answer) {
@@ -27,7 +30,7 @@ import inquirer from "inquirer";
       },
     ]);
 
-    let allNetworks = ["hardhat", "optimismSepolia", "baseSepolia", "zoraSepolia"];
+    let allNetworks = ["hardhat", "optimismSepolia", "baseSepolia", "zoraSepolia", "liskSepolia", "modeSepolia"];
     let selectedNetworks = answers.networks;
 
     // Check if "all the above" is selected

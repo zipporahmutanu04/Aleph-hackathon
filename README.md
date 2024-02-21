@@ -10,7 +10,7 @@
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
-Scaffold-OP is a fork of Scaffold-ETH2 with minimal differences, providing additional dApp examples, native support for Superchain testnets, and more low-level instructions. We highly recommend the Scaffold-ETH2 [documentations](https://docs.scaffoldeth.io/) as a place to learn. 
+Scaffold-OP is a fork of Scaffold-ETH2 with minimal differences, providing additional dApp examples, native support for Superchain testnets, and more low-level instructions. We highly recommend the Scaffold-ETH2 [documentations](https://docs.scaffoldeth.io/) as a place to learn.
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
@@ -31,8 +31,6 @@ Before you begin, you need to install the following tools:
 - [Node (>= v18.17)](https://nodejs.org/en/download/)
 - Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
 - [Git](https://git-scm.com/downloads)
-
-
 
 ## Quickstart
 
@@ -62,7 +60,7 @@ yarn deploy
 
 This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
 
-4. On a third terminal, start your NextJS app:
+4. On the same terminal, start your NextJS app:
 
 ```
 yarn start
@@ -76,13 +74,11 @@ Run smart contract test with `yarn hardhat:test`
 - Edit your frontend in `packages/nextjs/pages`
 - Edit your deployment scripts in `packages/hardhat/deploy`
 
-
-
 ## Deploy Contracts to Superchain Testnet(s)
 
 To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the steps below:
 
-1. Get Superchain Sepolia ETH from the [Superchain Faucet](https://app.optimism.io/faucet)
+1. Get Superchain Sepolia ETH from the [Superchain Faucet](https://app.optimism.io/faucet?utm_source=starterkit)
 
 2. Inside the `packages/hardhat` directory, copy `.env.example` to `.env`.
 
@@ -90,7 +86,7 @@ To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the step
    cd packages/hardhat && cp .env.example .env
    ```
 
-3. Edit your `.env` to specify the environment variables. Only specifying the`DEPLOYER_PRIVATE_KEY` is necessary here. The contracr will be deployed from the address associated with this private key, so make sure it has enough Sepolia ETH. 
+3. Edit your `.env` to specify the environment variables. Only specifying the`DEPLOYER_PRIVATE_KEY` is necessary here. The contracr will be deployed from the address associated with this private key, so make sure it has enough Sepolia ETH.
 
    ```bash
    DEPLOYER_PRIVATE_KEY = "your_private_key_with_sepolia_ETH";
@@ -108,17 +104,13 @@ To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the step
    yarn deploy --network networkName
    ```
 
-   Network names are found in `hardhat.config.js`. Please ensure you have enough Sepolia ETH on all these Superchains. If the deployments are successful, you will see the deployment tx hash on the terminal. 
-
-
+   Network names are found in `hardhat.config.js`. Please ensure you have enough Sepolia ETH on all these Superchains. If the deployments are successful, you will see the deployment tx hash on the terminal.
 
 ## Adding Foundry
 
-Scaffold-OP only uses Hardhat to reduce complexity. Hardhat's NodeJS stack and cleaner deployment management makes it the better default for a boilerplate.  
+Scaffold-OP only uses Hardhat to reduce complexity. Hardhat's NodeJS stack and cleaner deployment management makes it the better default for a boilerplate.
 
-To add Foundry to Scaffold-OP, follow this simple [tutorial](https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry) by Hardhat. We recommend users who want more robust and faster testing to add Foundry. 
-
-
+To add Foundry to Scaffold-OP, follow this simple [tutorial](https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry) by Hardhat. We recommend users who want more robust and faster testing to add Foundry.
 
 ## Documentation
 
