@@ -10,7 +10,8 @@
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
-Scaffold-OP is a fork of Scaffold-ETH2 with minimal differences, providing additional dApp examples, native support for Superchain testnets, and more low-level instructions. We highly recommend the Scaffold-ETH2 [documentations](https://docs.scaffoldeth.io/) as a place to learn. 
+
+Scaffold-OP is a fork of Scaffold-ETH2 with minimal differences, providing additional dApp examples, native support for Superchain testnets, and more low-level instructions. We highly recommend the Scaffold-ETH2 docs as the primary guideline.
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
@@ -31,7 +32,6 @@ Before you begin, you need to install the following tools:
 - [Node (>= v18.17)](https://nodejs.org/en/download/)
 - Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
 - [Git](https://git-scm.com/downloads)
-
 
 
 ## Quickstart
@@ -114,7 +114,7 @@ To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the step
 
 ## Adding Foundry
 
-Scaffold-OP only uses Hardhat to reduce complexity. Hardhat's NodeJS stack and cleaner deployment management makes it the better default for a boilerplate.  
+Hardhat's NodeJS stack and cleaner deployment management makes it a better default for Scaffold-OP.  
 
 To add Foundry to Scaffold-OP, follow this simple [tutorial](https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry) by Hardhat. We recommend users who want more robust and faster testing to add Foundry. 
 
