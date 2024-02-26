@@ -23,7 +23,7 @@ Scaffold-OP is a fork of Scaffold-ETH2 with minimal differences, providing addit
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+![Debug Contracts tab](https://github.com/ethereum-optimism/scaffold-op/blob/main/packages/nextjs/public/scaffold-op-landing.png)
 
 ## Requirements
 
