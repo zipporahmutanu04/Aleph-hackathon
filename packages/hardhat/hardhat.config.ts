@@ -12,7 +12,8 @@ import "hardhat-deploy-ethers";
 
 // If not set, it uses ours Alchemy's default API key.
 // You can get your own at https://dashboard.alchemyapi.io
-const providerApiKey = process.env.ALCHEMY_API_KEY || "oKxs-03sij-U_N0iOlrSsZFr29-IqbuF";
+
+const providerApiKey = process.env.ALCHEMY_API_KEY || "XfdusSNUiY5U0K7InJ1-seBOjcY-lBQi";
 // If not set, it uses the hardhat account 0 private key.
 const deployerPrivateKey =
   process.env.DEPLOYER_PRIVATE_KEY ?? "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
@@ -99,7 +100,7 @@ const config: HardhatUserConfig = {
       accounts: [deployerPrivateKey],
     },
     base: {
-      url: "https://mainnet.base.org",
+      url: `https://base-mainnet.g.alchemy.com/v2/${providerApiKey}`,
       accounts: [deployerPrivateKey],
     },
     baseGoerli: {
@@ -107,7 +108,7 @@ const config: HardhatUserConfig = {
       accounts: [deployerPrivateKey],
     },
     baseSepolia: {
-      url: "https://sepolia.base.org",
+      url: `https://base-sepolia.g.alchemy.com/v2/${providerApiKey}`,
       accounts: [deployerPrivateKey],
     },
     scrollSepolia: {
