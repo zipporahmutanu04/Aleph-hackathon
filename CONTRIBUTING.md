@@ -1,18 +1,18 @@
-# Welcome to Scaffold-ETH 2 Contributing Guide
+# Welcome to Scaffold-OP Contributing Guide
 
-Thank you for investing your time in contributing to Scaffold-ETH 2!
+Thank you for investing your time in contributing to Scaffold-OP!
 
 This guide aims to provide an overview of the contribution workflow to help us make the contribution process effective for everyone involved.
 
 ## About the Project
 
-Scaffold-ETH 2 is a minimal and forkable repo providing builders with a starter kit to build decentralized applications on Ethereum.
+Scaffold-OP is a minimal and forkable repo providing builders with a starter kit to build decentralized applications on Ethereum.
 
 Read the [README](README.md) to get an overview of the project.
 
 ### Vision
 
-The goal of Scaffold-ETH 2 is to provide the primary building blocks for a decentralized application.
+The goal of Scaffold-OP is to provide the primary building blocks for a decentralized application.
 
 The repo can be forked to include integrations and more features, but we want to keep the master branch simple and minimal.
 
@@ -76,7 +76,7 @@ Here are some tips for a high-quality pull request:
 - Create a title for the PR that accurately defines the work done.
 - Structure the description neatly to make it easy to consume by the readers. For example, you can include bullet points and screenshots instead of having one large paragraph.
 - Add the link to the issue if applicable.
-- Have a good commit message that summarises the work done.
+- Have a well-written commit message that summarizes the work done.
 
 Once you submit your PR:
 
