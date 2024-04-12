@@ -87,7 +87,7 @@ To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the step
    cd packages/hardhat && cp .env.example .env
    ```
 
-3. Edit your `.env` to specify the environment variables. Only specifying the`DEPLOYER_PRIVATE_KEY` is necessary here. The contracr will be deployed from the address associated with this private key, so make sure it has enough Sepolia ETH.
+3. Edit your `.env` to specify the environment variables. Only specifying the `DEPLOYER_PRIVATE_KEY` is necessary here. The contract will be deployed from the address associated with this private key, so make sure it has enough Sepolia ETH.
 
    ```bash
    DEPLOYER_PRIVATE_KEY = "your_private_key_with_sepolia_ETH";
