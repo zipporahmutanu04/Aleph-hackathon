@@ -1,10 +1,10 @@
 <div align="center">
-  <a href="https://optimism.io"><img alt="Optimism" src="https://raw.githubusercontent.com/ethereum-optimism/brand-kit/main/assets/svg/OPTIMISM-R.svg" width=320></a>
+  <a href="https://lisk.com"><img alt="Lisk" src="https://raw.githubusercontent.com/ethereum-optimism/brand-kit/main/assets/svg/OPTIMISM-R.svg" width=320></a>
   <br />
   <br />
 </div>
 
-# 🏗🔴 Scaffold-Lisk
+# Scaffold-Lisk
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
@@ -23,7 +23,7 @@ Scaffold-Lisk is a fork of Scaffold-ETH2 with minimal differences, providing add
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
 
-![Debug Contracts tab](https://github.com/ethereum-optimism/Scaffold-Lisk/blob/main/packages/nextjs/public/Scaffold-Lisk-landing.png)
+![Debug Contracts tab](https://github.com/LiskHQ/scaffold-lisk/blob/main/packages/nextjs/public/scaffold-lisk-landing.png)
 
 ## Requirements
 
@@ -40,8 +40,8 @@ To get started with Scaffold-Lisk, follow the steps below:
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/ethereum-optimism/Scaffold-Lisk.git
-cd Scaffold-Lisk
+git clone https://github.com/LiskHQ/scaffold-lisk.git
+cd scaffold-lisk
 yarn install
 ```
 
