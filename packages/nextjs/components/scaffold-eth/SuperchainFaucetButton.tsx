@@ -13,7 +13,7 @@ export const SuperchainFaucetButton = () => {
 
   return (
     <div className={"ml-1"} data-tip="Grab funds from Superchain faucet">
-      <button className="btn btn-secondary btn-sm px-2 rounded-full flex-nowrap" onClick={() => openSuperchainFaucet()}>
+      <button className="btn bg-base-100 btn-md rounded-full flex-nowrap" onClick={() => openSuperchainFaucet()}>
         <Image alt="Optimism Logo" src={opLogo.src} width={20} height={20} />
         Superchain Faucet
       </button>
