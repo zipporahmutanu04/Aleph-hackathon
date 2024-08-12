@@ -1,7 +1,5 @@
 <div align="left">
-  <a href="https://lisk.com"><img alt="Lisk" src="https://github.com/LiskHQ/scaffold-lisk/blob/LISK-900-adapt-scaffold-lisk-to-lisk-environment/packages/nextjs/public/readme-banner.png" width="100%"></a>
-  <br />
-  <br />
+  <a href="https://lisk.com"><img alt="Lisk" src="https://github.com/LiskHQ/scaffold-lisk/blob/main/packages/nextjs/public/readme-banner.png" width="100%"></a>
 </div>
 
 # Scaffold-Lisk
@@ -24,7 +22,7 @@ Scaffold-Lisk is a fork of Scaffold-OP with minimal differences, providing addit
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
 
 <div align="center">
-  <img alt="landing" src="https://github.com/LiskHQ/scaffold-lisk/blob/LISK-900-adapt-scaffold-lisk-to-lisk-environment/packages/nextjs/public/scaffold-lisk-landing.png" width="100%">
+  <img alt="landing" src="https://github.com/LiskHQ/scaffold-lisk/blob/main/packages/nextjs/public/scaffold-lisk-landing.png" width="100%">
 </div>
 
 ## Requirements

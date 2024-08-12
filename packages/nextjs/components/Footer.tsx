@@ -38,23 +38,13 @@ export const Footer = () => {
         <ul className="menu menu-horizontal w-full">
           <div className="flex justify-center items-center gap-2 text-sm w-full">
             <div className="text-center">
-              <a
-                href="https://github.com/ethereum-optimism/Scaffold-Lisk/"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
+              <a href="https://github.com/LiskHQ/scaffold-lisk" target="_blank" rel="noreferrer" className="link">
                 Fork me
               </a>
             </div>
             <span>·</span>
             <div className="text-center">
-              <a
-                href="https://github.com/ethereum-optimism/developers/discussions"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
+              <a href="https://discord.com/invite/7EKWJ7b" target="_blank" rel="noreferrer" className="link">
                 Lisk Dev Support
               </a>
             </div>
