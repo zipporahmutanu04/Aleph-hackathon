@@ -93,7 +93,7 @@ To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the step
    DEPLOYER_PRIVATE_KEY = "your_private_key_with_sepolia_ETH";
    ```
 
-4. Inside `Scaffold-Lisk`, run
+4. Inside `scaffold-lisk`, run
 
    ```bash
    yarn deploy --network-options
