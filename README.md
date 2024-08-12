@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://lisk.com"><img alt="Lisk" src="https://raw.githubusercontent.com/ethereum-optimism/brand-kit/main/assets/svg/OPTIMISM-R.svg" width=320></a>
+  <a href="https://lisk.com"><img alt="Lisk" src="https://github.com/LiskHQ/scaffold-lisk/blob/LISK-900-adapt-scaffold-lisk-to-lisk-environment/packages/nextjs/public/readme-banner.png" width=320></a>
   <br />
   <br />
 </div>
@@ -11,7 +11,7 @@
   <a href="https://scaffoldeth.io">Website</a>
 </h4>
 
-Scaffold-Lisk is a fork of Scaffold-ETH2 with minimal differences, providing additional dApp examples, native support for Superchain testnets, and more low-level instructions. We highly recommend the Scaffold-ETH2 docs as the primary guideline.
+Scaffold-Lisk is a fork of Scaffold-OP with minimal differences, providing additional dApp examples, native support for Superchain testnets, and more low-level instructions. We highly recommend the Scaffold-ETH2 docs as the primary guideline.
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
@@ -23,7 +23,9 @@ Scaffold-Lisk is a fork of Scaffold-ETH2 with minimal differences, providing add
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
 
-![Debug Contracts tab](https://github.com/LiskHQ/scaffold-lisk/blob/main/packages/nextjs/public/scaffold-lisk-landing.png)
+<div align="center">
+  <img alt="landing" src="https://github.com/LiskHQ/scaffold-lisk/blob/LISK-900-adapt-scaffold-lisk-to-lisk-environment/packages/nextjs/public/scaffold-lisk-landing.png" width=320>
+</div>
 
 ## Requirements
 
