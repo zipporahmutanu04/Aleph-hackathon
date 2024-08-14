@@ -16,8 +16,8 @@ Scaffold-Lisk is a fork of Scaffold-OP with minimal differences, providing addit
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
 
-<div align="center">
-  <img alt="landing" src="https://github.com/LiskHQ/scaffold-lisk/blob/main/packages/nextjs/public/scaffold-lisk-landing.png" width="100%">
+<div align="center" style="margin-top: 24px;">
+  <img alt="App demo" src="./packages/nextjs/public/scaffold-lisk-landing.png" width="100%">
 </div>
 
 ## Requirements
