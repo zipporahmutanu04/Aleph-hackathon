@@ -1,13 +1,8 @@
 <div align="left">
-  <a href="https://lisk.com"><img alt="Lisk" src="https://github.com/LiskHQ/scaffold-lisk/blob/main/packages/nextjs/public/readme-banner.png" width="100%"></a>
+  <a href="https://lisk.com"><img alt="Lisk" src="./packages/nextjs/public/readme-banner.png" width="100%"></a>
 </div>
 
-# Scaffold-Lisk
-
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+<br />
 
 Scaffold-Lisk is a fork of Scaffold-OP with minimal differences, providing additional dApp examples, native support for Superchain testnets, and more low-level instructions. We highly recommend the Scaffold-ETH2 docs as the primary guideline.
 
