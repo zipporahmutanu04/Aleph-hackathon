@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useCallback, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import sunny from "./assets/sunny.svg";
-import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
+import { Logo } from "./Logo";
+import { Bars3Icon, BugAntIcon, HomeIcon } from "@heroicons/react/24/outline";
 import {
   DappConsoleButton,
   FaucetButton,
@@ -13,6 +12,7 @@ import {
   SuperchainFaucetButton,
 } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
+import { cn } from "~~/utils/cn";
 
 type HeaderMenuLink = {
   label: string;
@@ -24,6 +24,7 @@ export const menuLinks: HeaderMenuLink[] = [
   {
     label: "Home",
     href: "/",
+    icon: <HomeIcon className="h-4 w-4" />,
   },
   {
     label: "Debug Contracts",
@@ -44,12 +45,13 @@ export const HeaderMenuLinks = () => {
             <Link
               href={href}
               passHref
-              className={`${
-                isActive ? "bg-secondary shadow-md" : ""
-              } hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
+              className={cn(
+                "relative flex items-center justify-between px-4 py-2 text-sm transition-colors duration-200",
+                isActive ? "bg-base-100 text-primary" : "text-slate-400",
+              )}
             >
               {icon}
-              <span>{label}</span>
+              {label}
             </Link>
           </li>
         );
@@ -70,7 +72,7 @@ export const Header = () => {
   );
 
   return (
-    <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
+    <header className="sticky lg:static top-0 navbar bg-base-300 min-h-0 flex-shrink-0 justify-between z-20 px-0 sm:px-2 border-b border-[#252442]">
       <div className="navbar-start w-auto lg:w-1/2">
         <div className="lg:hidden dropdown" ref={burgerMenuRef}>
           <label
@@ -95,11 +97,11 @@ export const Header = () => {
           )}
         </div>
         <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
-          <div className="flex relative w-10 h-10">
-            <Image alt="SE2 logo" className="cursor-pointer" src={sunny} />
+          <div className="flex relative">
+            <Logo size={24} />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold leading-tight">Scaffold-OP</span>
+            <span className="font-bold leading-tight">Scaffold-Lisk</span>
             <span className="text-xs">Ethereum dev stack</span>
           </div>
         </Link>
@@ -113,6 +115,6 @@ export const Header = () => {
         <SuperchainFaucetButton />
         <DappConsoleButton />
       </div>
-    </div>
+    </header>
   );
 };

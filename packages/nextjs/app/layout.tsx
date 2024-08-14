@@ -9,9 +9,9 @@ const baseUrl = process.env.VERCEL_URL
   : `http://localhost:${process.env.PORT || 3000}`;
 const imageUrl = `${baseUrl}/thumbnail.jpg`;
 
-const title = "Scaffold-OP App";
-const titleTemplate = "%s | Scaffold-OP";
-const description = "Built with 🏗 Scaffold-OP";
+const title = "Scaffold-Lisk App";
+const titleTemplate = "%s | Scaffold-Lisk";
+const description = "Built with 🏗 Scaffold-Lisk";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description,
   },
   icons: {
-    icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
+    icon: [{ url: "/favicon.ico", sizes: "32x32", type: "image/png" }],
   },
 };
 
@@ -50,7 +50,7 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (
     <html suppressHydrationWarning>
       <body>
-        <ThemeProvider enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
           <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
         </ThemeProvider>
       </body>

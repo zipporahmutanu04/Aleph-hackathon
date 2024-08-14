@@ -1,17 +1,10 @@
-<div align="center">
-  <a href="https://optimism.io"><img alt="Optimism" src="https://raw.githubusercontent.com/ethereum-optimism/brand-kit/main/assets/svg/OPTIMISM-R.svg" width=320></a>
-  <br />
-  <br />
+<div align="left">
+  <a href="https://lisk.com"><img alt="Lisk" src="./packages/nextjs/public/readme-banner.png" width="100%"></a>
 </div>
 
-# 🏗🔴 Scaffold-OP
+<br />
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
-
-Scaffold-OP is a fork of Scaffold-ETH2 with minimal differences, providing additional dApp examples, native support for Superchain testnets, and more low-level instructions. We highly recommend the Scaffold-ETH2 docs as the primary guideline.
+Scaffold-Lisk is a fork of Scaffold-OP with minimal differences, providing additional dApp examples, native support for Superchain testnets, and more low-level instructions. We highly recommend the Scaffold-ETH2 docs as the primary guideline.
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
@@ -23,7 +16,9 @@ Scaffold-OP is a fork of Scaffold-ETH2 with minimal differences, providing addit
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
 
-![Debug Contracts tab](https://github.com/ethereum-optimism/scaffold-op/blob/main/packages/nextjs/public/scaffold-op-landing.png)
+<div align="center" style="margin-top: 24px;">
+  <img alt="App demo" src="./packages/nextjs/public/scaffold-lisk-landing.png" width="100%">
+</div>
 
 ## Requirements
 
@@ -35,13 +30,13 @@ Before you begin, you need to install the following tools:
 
 ## Quickstart
 
-To get started with Scaffold-OP, follow the steps below:
+To get started with Scaffold-Lisk, follow the steps below:
 
 1. Clone this repo & install dependencies
 
 ```
-git clone https://github.com/ethereum-optimism/scaffold-op.git
-cd scaffold-op
+git clone https://github.com/LiskHQ/scaffold-lisk.git
+cd scaffold-lisk
 yarn install
 ```
 
@@ -93,7 +88,7 @@ To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the step
    DEPLOYER_PRIVATE_KEY = "your_private_key_with_sepolia_ETH";
    ```
 
-4. Inside `scaffold-op`, run
+4. Inside `scaffold-lisk`, run
 
    ```bash
    yarn deploy --network-options
@@ -109,9 +104,9 @@ To deploy contracts to a remote testnet (e.g. Optimism Sepolia), follow the step
 
 ## Adding Foundry
 
-Hardhat's NodeJS stack and cleaner deployment management makes it a better default for Scaffold-OP.
+Hardhat's NodeJS stack and cleaner deployment management makes it a better default for Scaffold-Lisk.
 
-To add Foundry to Scaffold-OP, follow this simple [tutorial](https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry) by Hardhat. We recommend users who want more robust and faster testing to add Foundry.
+To add Foundry to Scaffold-Lisk, follow this simple [tutorial](https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry) by Hardhat. We recommend users who want more robust and faster testing to add Foundry.
 
 ## Documentation
 

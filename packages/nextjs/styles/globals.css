@@ -4,7 +4,7 @@
 
 :root,
 [data-theme] {
-  background: oklch(var(--b2));
+  background: oklch(var(--b3));
 }
 
 body {
@@ -17,10 +17,6 @@ h3,
 h4 {
   margin-bottom: 0.5rem;
   line-height: 1;
-}
-
-p {
-  margin: 1rem 0;
 }
 
 .btn {
