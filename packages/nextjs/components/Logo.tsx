@@ -8,24 +8,22 @@ type Props = React.ComponentProps<"svg"> & {
 /**
  * Lisk logo.
  */
-export const Logo: React.FC<Props> = ({ size = 32, ...props }) => {
+export const Logo: React.FC<Props> = ({ color = "#FFFFFF", size = 32, ...props }) => {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" {...props}>
-      <g clipPath="url(#clip0_1692_63849)">
-        <path
-          d="M18 0H6C2.68629 0 0 2.68629 0 6V18C0 21.3137 2.68629 24 6 24H18C21.3137 24 24 21.3137 24 18V6C24 2.68629 21.3137 0 18 0Z"
-          fill="#4170F5"
-        />
-        <path
-          d="M12.007 5L10.7339 7.0914L15.3296 14.8704L11.6013 18.9999C11.6013 18.9999 14.5317 18.9828 14.5143 18.9999C14.497 19.0171 18 15.1104 18 15.1104L12.007 5ZM10.3352 7.86269L6 15.1448L9.41609 18.9999H10.7009L12.5791 16.8407H10.4922L8.65217 14.8193L11.6 9.86734L10.3352 7.86269Z"
-          fill="white"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_1692_63849">
-          <rect width="24" height="24" rx="12" fill="white" />
-        </clipPath>
-      </defs>
+    <svg
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      width={size}
+      height={size}
+      viewBox="0 0 229.1 259"
+      {...props}
+    >
+      <polygon style={{ fill: color }} points="114.4 0 88.5 42.9 173.7 182.5 102.4 259 162.8 259 229.1 187.9 114.4 0" />
+      <polygon
+        style={{ fill: color }}
+        points="86.6 215.9 55.5 182.5 107.8 96.6 81.7 53.9 0 187.9 66.3 259 88.3 259 128.7 215.9 86.6 215.9"
+      />
     </svg>
   );
 };
