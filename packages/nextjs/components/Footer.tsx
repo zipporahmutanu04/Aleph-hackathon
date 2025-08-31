@@ -13,43 +13,71 @@ export const Footer = () => {
   const isLocalNetwork = targetNetwork.id === hardhat.id;
 
   return (
-    <footer className="min-h-0 py-5 px-1 mb-11 lg:mb-0 border-t border-[#252442]">
+    <footer className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-12 mt-20">
       <div>
-        <div className="fixed flex justify-between items-center w-full z-10 p-4 bottom-0 left-0 pointer-events-none">
-          <div className="flex flex-col md:flex-row gap-2 pointer-events-auto">
-            {/* <div>
-              <div className="btn btn-primary btn-sm font-normal gap-1 cursor-auto">
-                <span>Dapp Developer Console</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Logo size={32} color="#FFFFFF" />
+                <span className="text-xl font-bold">EcoChain</span>
               </div>
-            </div> */}
+              <p className="text-emerald-100 text-sm">
+                Building a sustainable future through blockchain technology and community action.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Platform</h4>
+              <ul className="space-y-2 text-sm text-emerald-100">
+                <li><a href="/dashboard" className="hover:text-white transition-colors">Dashboard</a></li>
+                <li><a href="/missions" className="hover:text-white transition-colors">Missions</a></li>
+                <li><a href="/leaderboard" className="hover:text-white transition-colors">Leaderboard</a></li>
+                <li><a href="/rewards" className="hover:text-white transition-colors">Rewards</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2 text-sm text-emerald-100">
+                <li><a href="/docs" className="hover:text-white transition-colors">Documentation</a></li>
+                <li><a href="/api" className="hover:text-white transition-colors">API</a></li>
+                <li><a href="/support" className="hover:text-white transition-colors">Support</a></li>
+                <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Community</h4>
+              <ul className="space-y-2 text-sm text-emerald-100">
+                <li><a href="https://discord.com/invite/7EKWJ7b" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Discord</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Twitter</a></li>
+                <li><a href="https://github.com/LiskHQ/scaffold-lisk" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-emerald-500/30 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="text-sm text-emerald-100">
+                © 2025 EcoChain. Built for Aleph Hackathon. All rights reserved.
+              </div>
+              <div className="flex gap-4">
             {isLocalNetwork && (
-              <>
-                <Faucet />
-                <Link href="/blockexplorer" passHref className="btn btn-primary btn-sm font-normal gap-1">
+              <div className="flex gap-2">
+                <div className="pointer-events-auto">
+                  <Faucet />
+                </div>
+                <Link href="/blockexplorer" passHref className="btn btn-sm bg-white/20 text-white border-white/30 hover:bg-white/30">
                   <MagnifyingGlassIcon className="h-4 w-4" />
-                  <span>Block Explorer</span>
+                  <span>Explorer</span>
                 </Link>
-              </>
+              </div>
             )}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="w-full">
-        <ul className="menu menu-horizontal w-full">
-          <div className="flex justify-center items-center gap-2 text-sm w-full">
-            <div className="text-center">
-              <a href="https://github.com/LiskHQ/scaffold-lisk" target="_blank" rel="noreferrer" className="link">
-                Fork me
-              </a>
-            </div>
-            <span>·</span>
-            <div className="text-center">
-              <a href="https://discord.com/invite/7EKWJ7b" target="_blank" rel="noreferrer" className="link">
-                Lisk Dev Support
-              </a>
-            </div>
-          </div>
-        </ul>
       </div>
     </footer>
   );

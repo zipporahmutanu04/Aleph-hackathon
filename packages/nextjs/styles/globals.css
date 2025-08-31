@@ -26,3 +26,59 @@ h4 {
 .btn.btn-ghost {
   @apply shadow-none;
 }
+
+/* Custom Button Styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-xl font-medium 
+         hover:from-emerald-600 hover:to-teal-600 transform hover:scale-105 transition-all duration-200 
+         shadow-lg hover:shadow-xl flex items-center gap-2 border-0;
+}
+
+.btn-secondary {
+  @apply bg-white/80 text-gray-700 px-6 py-3 rounded-xl font-medium 
+         hover:bg-white hover:text-gray-900 transform hover:scale-105 transition-all duration-200 
+         shadow-md hover:shadow-lg flex items-center gap-2 border border-gray-200;
+}
+
+.btn-outline {
+  @apply bg-transparent text-emerald-600 px-6 py-3 rounded-xl font-medium border-2 border-emerald-500
+         hover:bg-emerald-500 hover:text-white transform hover:scale-105 transition-all duration-200 
+         flex items-center gap-2;
+}
+
+/* Glassmorphism Effects */
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+}
+
+.glass-card-dark {
+  @apply bg-black/20 backdrop-blur-md border border-white/10 shadow-xl rounded-2xl;
+}
+
+/* Hover Effects */
+.glass-card:hover {
+  @apply bg-white/80 border-white/30 shadow-2xl transform translate-y-[-2px] transition-all duration-300;
+}
+
+/* Animation Classes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-emerald-300 rounded-full hover:bg-emerald-400;
+}

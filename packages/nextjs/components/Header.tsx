@@ -4,7 +4,7 @@ import React, { useCallback, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
-import { Bars3Icon, BugAntIcon, HomeIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BugAntIcon, HomeIcon, ChartBarIcon, CurrencyDollarIcon } from "@heroicons/react/24/outline";
 import {
   DappConsoleButton,
   FaucetButton,
@@ -25,6 +25,21 @@ export const menuLinks: HeaderMenuLink[] = [
     label: "Home",
     href: "/",
     icon: <HomeIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Dashboard",
+    href: "/dashboard",
+    icon: <ChartBarIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Missions",
+    href: "/missions",
+    icon: <CurrencyDollarIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Wallet",
+    href: "/wallet",
+    icon: <CurrencyDollarIcon className="h-4 w-4" />,
   },
   {
     label: "Debug Contracts",
@@ -98,11 +113,11 @@ export const Header = () => {
         </div>
         <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
           <div className="flex relative">
-            <Logo size={24} />
+            <Logo size={24} color="#059669" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold leading-tight">Scaffold-Lisk</span>
-            <span className="text-xs">Ethereum dev stack</span>
+            <span className="font-bold leading-tight text-emerald-600">EcoChain</span>
+            <span className="text-xs text-gray-500">Sustainable Future</span>
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">

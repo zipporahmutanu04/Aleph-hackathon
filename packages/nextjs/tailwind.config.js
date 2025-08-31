@@ -47,6 +47,13 @@ module.exports = {
       },
       animation: {
         "pulse-fast": "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "float": "float 6s ease-in-out infinite",
+      },
+      backdropBlur: {
+        xs: "2px",
+      },
+      scale: {
+        "102": "1.02",
       },
     },
   },

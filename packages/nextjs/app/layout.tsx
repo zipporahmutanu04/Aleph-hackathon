@@ -10,8 +10,8 @@ const baseUrl = process.env.VERCEL_URL
 const imageUrl = `${baseUrl}/thumbnail.jpg`;
 
 const title = "Scaffold-Lisk App";
-const titleTemplate = "%s | Scaffold-Lisk";
-const description = "Built with 🏗 Scaffold-Lisk";
+const titleTemplate = "%s | EcoChain";
+const description = "Earn TAKA tokens by collecting trash and building a sustainable future";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
