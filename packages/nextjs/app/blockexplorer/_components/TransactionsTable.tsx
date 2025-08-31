@@ -1,5 +1,6 @@
 import { TransactionHash } from "./TransactionHash";
-import { formatEther } from "viem";
+// import { formatEther } from "viem";
+import { formatEther } from "ethers";
 import { Address } from "~~/components/scaffold-eth";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth/useTargetNetwork";
 import { TransactionWithFunction } from "~~/utils/scaffold-eth";

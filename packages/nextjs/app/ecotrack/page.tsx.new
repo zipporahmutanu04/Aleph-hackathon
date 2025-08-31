@@ -1,0 +1,105 @@
+"use client";
+
+import { useAccount } from "wagmi";
+import { useScaffoldContractRead } from "~~/hooks/scaffold-eth";
+import { useState } from "react";
+import LoadingSpinner from "./components/LoadingSpinner";
+import CollectionForm from "./components/CollectionForm";
+import StatsCard from "./components/StatsCard";
+import MPesaRedemption from "./components/MPesaRedemption";
+import ImpactDashboard from "./components/ImpactDashboard";
+
+export default function EcoTrackPage() {
+  const { address } = useAccount();
+  const [pageLoading, setPageLoading] = useState(false);
+
+  const { data: collectorInfo, isLoading: isLoadingCollector } = useScaffoldContractRead({
+    contractName: "WasteManagement",
+    functionName: "collectors",
+    args: [address],
+  });
+
+  if (!address) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[60vh] bg-gradient-to-b from-green-50 to-white">
+        <h1 className="text-4xl font-bold text-green-800 mb-4">Welcome to EcoTrack</h1>
+        <p className="text-lg text-green-600 mb-8">Please connect your wallet to continue</p>
+        <div className="p-4 bg-green-50 rounded-lg border border-green-200 text-green-700">
+          Connect your wallet using the button in the top right
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-y-6 lg:gap-y-8 py-8 lg:py-12 px-4 md:px-8 max-w-7xl mx-auto">
+      {/* Header Section */}
+      <div className="flex flex-col items-center gap-y-3 bg-gradient-to-r from-green-50 to-green-100 p-8 rounded-2xl shadow-sm">
+        <h1 className="text-4xl font-bold text-green-800">EcoTrack Dashboard</h1>
+        {isLoadingCollector ? (
+          <LoadingSpinner />
+        ) : collectorInfo?.active ? (
+          <div className="flex flex-col items-center">
+            <p className="text-xl text-green-700">Welcome, Verified Collector!</p>
+            <p className="text-sm text-green-600">Total Collections: {collectorInfo?.totalCollected?.toString() || "0"} kg</p>
+          </div>
+        ) : (
+          <p className="text-xl text-yellow-600">Pending Collector Verification</p>
+        )}
+      </div>
+
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <StatsCard
+          title="Total Collections"
+          value="0 kg"
+          icon={<span className="text-3xl">♻️</span>}
+        />
+        <StatsCard
+          title="Eco Tokens Minted"
+          value="0 ECO"
+          icon={<span className="text-3xl">🌱</span>}
+        />
+        <StatsCard
+          title="Active Collectors"
+          value="0"
+          icon={<span className="text-3xl">👥</span>}
+        />
+      </div>
+
+      {/* Collection Form */}
+      {collectorInfo?.active && (
+        <CollectionForm
+          isLoading={pageLoading}
+          setIsLoading={setPageLoading}
+        />
+      )}
+
+      {/* M-Pesa Redemption */}
+      <MPesaRedemption
+        ecoTokenBalance="100"
+        onRedeem={async (amount, phoneNumber) => {
+          // Mock M-Pesa integration
+          return new Promise((resolve) => setTimeout(resolve, 2000));
+        }}
+      />
+
+      {/* Impact Dashboard */}
+      <ImpactDashboard
+        metrics={{
+          totalWaste: 1250,
+          totalCollectors: 15,
+          totalCitizens: 150,
+          tokensMinted: 12500,
+          weeklyCollections: [120, 150, 180, 140, 160, 190, 200],
+          wasteTypes: {
+            plastic: 500,
+            paper: 300,
+            glass: 250,
+            metal: 200,
+          },
+        }}
+      />
+    </div>
+  );
+}
