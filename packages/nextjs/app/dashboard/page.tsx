@@ -9,7 +9,8 @@ import {
   GiftIcon, 
   TrophyIcon,
   MapPinIcon,
-  CalendarIcon
+  CalendarIcon,
+  GlobeAltIcon
 } from "@heroicons/react/24/outline";
 import { Address, Balance } from "~~/components/scaffold-eth";
 
